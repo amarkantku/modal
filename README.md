@@ -1,1 +1,1 @@
-Simple modal using HTML, CSS and JavaScript
+## Simple modal using HTML, CSS and JavaScript
