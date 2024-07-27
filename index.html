@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modal Library Example</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <button id="open-modal">Open Modal</button>
+
+  <script src="modal.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const modal = new ModalLibrary();
+      const openModalButton = document.getElementById('open-modal');
+
+      openModalButton.addEventListener('click', () => {
+        modal.open({
+          title: 'Custom Modal Title',
+          content: 'This is a customizable modal content.',
+          onOk: (status) => { alert('OK clicked! ' + status); },
+          onCancel: (status) => { alert('Cancel clicked! ' + status); }
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>
